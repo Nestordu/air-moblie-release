@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="My App Builder" basedir=".">
+
+	<property name="FLEX_HOME" value="D:\Program Files (x86)\Adobe\Adobe Flash Builder 4.7\eclipse\plugins\com.adobe.flash.compiler_4.7.0.349722\AIRSDK" />
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+	<property name="ADT.JAR" value="${FLEX_HOME}/lib/adt.jar" />
+
+	<property name="APP_ROOT" value="D:\jobWp47\testant" />
+	<property name="APP_NAME" value="testant" />
+	<property name="APP_MAIN_CLASS" value="testant.as" />
+	<property name="APP_ROOT_FILE" value="${APP_NAME}.swf" />
+	<property name="APP_OUTPUT_PATH" value="${APP_ROOT}/bin" />
+
+	<target name="swf">
+		<property name="release" value="true" />
+
+		<mxmlc file="${APP_ROOT}/src/${APP_MAIN_CLASS}" output="${APP_OUTPUT_PATH}/${APP_ROOT_FILE}" actionscript-file-encoding="UTF-8" keep-generated-actionscript="true" show-unused-type-selector-warnings="false" static-link-runtime-shared-libraries="true" fork="true" warnings="false" incremental="true" maxmemory="512m">
+
+			<!-- Get default compiler options. -->
+			<load-config filename="${FLEX_HOME}/frameworks/airmobile-config.xml" />
+			<!-- List of path elements that form the roots of ActionScript
+            class hierarchies. -->
+			<source-path path-element="${FLEX_HOME}/frameworks" />
+			<source-path path-element="${APP_ROOT}/src" />
+			<!--<source-path path-element="${APP_ROOT}/thirds"/>-->
+			<!-- List of SWC files or directories that contaian SWC files. -->
+			<compiler.library-path dir="${FLEX_HOME}/frameworks" append="true">
+                <include name="libs" />
+                <include name="../bundles/{locale}" />
+            </compiler.library-path>
+
+			<!--	<compiler.external-library-path dir="${APP_ROOT}/libs/ext"  includes="*.swc" append="true" /> -->
+			<!--compiler.library-path dir="${APP_ROOT}/libs/lib_global"  includes="*.swc" append="true" /-->
+			<!--	<compiler.include-libraries dir="${APP_ROOT}/libs" includes="*.swc" append="true" /> -->
+			<!--	<compiler.include-libraries dir="${APP_ROOT}/libs/${gamecode}/${agents}" includes="*.swc" append="true" /> -->
+			<!--			<compiler.include-libraries dir="${APP_ROOT}/libs/lib_${gamecode}/${lan}" includes="*.swc" append="true" />-->
+			<!-- 			<compiler.extensions.extension dir="${APP_ROOT}/assets/ext" includes="*.ane" append="true" /> -->
+			<swf-version>24</swf-version>
+		</mxmlc>
+		   
+        <delete dir="${APP_OUTPUT_PATH}/generated"/>
+        <delete>
+            <fileset dir="${APP_OUTPUT_PATH}" includes="${APP_NAME}.swf.cache"/>
+        </delete>
+        
+	</target>
+</project>
