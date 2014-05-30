@@ -15,11 +15,9 @@ set ROOT_PATH=D:\jobWp47\testant\ant
 ::change path
 cd /d %ROOT_PATH%
 
-
 echo begin:%time%
 echo compile.....	
 call ant -f build.xml swf
-
 
 echo end:%time%	
 pause

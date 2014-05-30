@@ -22,13 +22,12 @@
             class hierarchies. -->
 			<source-path path-element="${FLEX_HOME}/frameworks" />
 			<source-path path-element="${APP_ROOT}/src" />
-			<!--<source-path path-element="${APP_ROOT}/thirds"/>-->
+			
 			<!-- List of SWC files or directories that contaian SWC files. -->
 			<compiler.library-path dir="${FLEX_HOME}/frameworks" append="true">
                 <include name="libs" />
                 <include name="../bundles/{locale}" />
             </compiler.library-path>
-
 			<!--	<compiler.external-library-path dir="${APP_ROOT}/libs/ext"  includes="*.swc" append="true" /> -->
 			<!--compiler.library-path dir="${APP_ROOT}/libs/lib_global"  includes="*.swc" append="true" /-->
 			<!--	<compiler.include-libraries dir="${APP_ROOT}/libs" includes="*.swc" append="true" /> -->
