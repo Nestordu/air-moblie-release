@@ -10,6 +10,7 @@
 	<property name="APP_MAIN_CLASS" value="testant.as" />
 	<property name="APP_ROOT_FILE" value="${APP_NAME}.swf" />
 	<property name="APP_OUTPUT_PATH" value="${APP_ROOT}/bin" />
+	<property name="ANE_DIR" value="${APP_ROOT}/lib" />
 
 	<target name="swf">
 		<property name="release" value="true" />
@@ -28,6 +29,9 @@
                 <include name="libs" />
                 <include name="../bundles/{locale}" />
             </compiler.library-path>
+			<!--  ane files -->
+			<compiler.external-library-path dir="${ANE_DIR}"  includes="*.swc" append="true" />
+			
 			<!--	<compiler.external-library-path dir="${APP_ROOT}/libs/ext"  includes="*.swc" append="true" /> -->
 			<!--compiler.library-path dir="${APP_ROOT}/libs/lib_global"  includes="*.swc" append="true" /-->
 			<!--	<compiler.include-libraries dir="${APP_ROOT}/libs" includes="*.swc" append="true" /> -->
