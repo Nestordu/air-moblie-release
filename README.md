@@ -1,5 +1,4 @@
-##air-moblie-release
-==================
+# air-moblie-release
 
 This is a project that can release an IPA/APK quickly.
 
@@ -7,16 +6,12 @@ This is a project that can release an IPA/APK quickly.
 
 目前项目处于前期的资料整理，demo测试阶段！
 
-##测试记录/Record
-==================
+## 测试记录/Record
 
-2014.6.10
+* 2014.6.10
+* 使用ant脚本，调用mxmlc来生成swf时，如果有用到ANE的话，需要将ANE文件后缀名(*.ane)改为SWC文件(*.swc)，然后加入以下配置:<compiler.external-library-path dir="${ANE_DIR}"  includes="*.swc" append="true" />[技术参考](http://stackoverflow.com/questions/11112705/using-ant-mxmlc-task-with-native-extension)
 
-使用ant脚本，调用mxmlc来生成swf时，如果有用到ANE的话，需要将ANE文件后缀名（*.ane）改为SWC文件（*.swc），然后加入以下配置:
-<compiler.external-library-path dir="${ANE_DIR}"  includes="*.swc" append="true" />
+## 快速链接/Quick Links
 
-[技术参考](http://stackoverflow.com/questions/11112705/using-ant-mxmlc-task-with-native-extension)
-
-##我的博客/My Blog
-[斯樵工坊/SQStudio.com](http://www/sqstudio.com)
-QQ群:80386869
+* [斯樵工坊/SQStudio.com](http://www/sqstudio.com)
+* QQ群:80386869
