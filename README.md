@@ -12,9 +12,7 @@ This is a project that can release an IPA/APK quickly.
 
 
 
-- 2014.6.10 使用ant脚本，调用mxmlc来生成swf时，如果有用到ANE的话，需要将ANE文件后缀名(*.ane)改为SWC文件(*.swc)，然后加入以下配置:
-	<div><div>&nbsp; &nbsp;&lt;compiler.external-library-path dir="${ANE_DIR}" &nbsp;includes="*.swc" append="true" /&gt;</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div></div><div><br></div><div><sign signid="3" nreadytime="1402413012673"><div style="font-size:14px;font-family:Verdana;color:#000;">
-</div></sign></div>[技术参考](http://stackoverflow.com/questions/11112705/using-ant-mxmlc-task-with-native-extension)
+- 2014.6.10 使用ant脚本，调用mxmlc来生成swf时，如果有用到ANE的话，需要将ANE文件后缀名(*.ane)改为SWC文件(*.swc)，然后加入以下配置:<div><div><span style="line-height: 1.5;">&lt;compiler.external-library-path dir="${ANE_DIR}" &nbsp;includes="*.swc" append="true" /&gt;</span></div></div><div><sign signid="3" nreadytime="1402413012673"><div style="font-size:14px;font-family:Verdana;color:#000;"></div></sign></div><div>&nbsp;</div>[技术参考](http://stackoverflow.com/questions/11112705/using-ant-mxmlc-task-with-native-extension)
 
 ## 快速链接/Quick Links
 
